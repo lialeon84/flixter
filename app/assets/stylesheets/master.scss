@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   background: image_url('bg.png');
+  font-family: 'Crimson Text', serif;
 }
 
 body {
@@ -71,8 +72,16 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 20px;
+  
+  
 }
 
+.booyah-box h2, .booyah-box h1 {
+  margin-top: auto
+}
 
 
 
