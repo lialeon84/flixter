@@ -84,5 +84,7 @@ gem "mini_magick"
 
 gem 'carrierwave-aws'
 
+gem 'stripe'
+
 
 
