@@ -19,12 +19,11 @@
         <br />
         <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
       <% end %>
-
-       <br />
       <br />
-       <% if current_user %>
-    <% if current_user.enrolled_in?(@course) %>
+      <br />
 
+        <% if current_user %>
+        <% if current_user.enrolled_in?(@course) %>
         <h3 class="badge badge-info">You Are Enrolled!</h3>
       <% else %>
          <% if @course.free? %>
@@ -37,22 +36,25 @@
                 data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
                 data-amount="<%= (@course.cost * 100).to_i %>"
                 data-locale="auto"></script>
-      <% end %>
+            <% end %>
         <% end %>
       <% end %>
-        <% end %>
-  <% else %>
-    <h3 class="badge badge-info">Sign In to Enroll!</h3>
-    </div>
+  
 
+    <% else %>
+    <h3 class="badge badge-info">Sign In to Enroll!</h3>
+  <% end %> 
+</div>
+     <br>
     <div class="col-sm-8 col-12">
+      <br>
       <%= @course.description %>
     </div>
   </div>
 
   <div class="col-12">
-   <% @course.sections.each do |section| %>
-      <br /><br />
+   <% @course.sections.rank(:row_order).each do |section| %>
+      <br><br>
       <div class="section">
         <h3>
           <%= section.title %>
