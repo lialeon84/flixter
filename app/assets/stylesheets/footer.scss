@@ -19,6 +19,9 @@ body {
   background: image_url('pinkdust.png');
   color: white;
   font-family: 'Crimson Text', serif;
+  padding: 10px 0px;
+  margin-top: 30px;
+  font-weight: 100;
 }
 
 #footer a {
@@ -26,4 +29,12 @@ body {
   font-weight: 100;
   padding: 10px 0px;
   margin-top: auto
+}
+
+.social-button {
+  margin: 4px;
+}
+
+.social a:hover {
+  text-decoration: none;
 }
